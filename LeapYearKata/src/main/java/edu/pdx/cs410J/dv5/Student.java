@@ -48,7 +48,21 @@ public class Student extends Human {
    * standard out by invoking its <code>toString</code> method.
    */
   public static void main(String[] args) {
-    System.err.println("Missing command line arguments");
+    LeapYear leapyear = new LeapYear();
+    int year = 0;
+    try {
+      year = Integer.parseInt(args[0]);
+    } catch (NumberFormatException e) {
+      printErrorMessageAndExit("Enter valid Integer Number");
+    }
+    if(leapyear.checkIfLeapYear(year)) {
+      System.out.println("The given year " + year + " is leap year");
+    } else {
+      System.out.println("The given year " + year + " is not leap year");
+    }
+  }
+  private static void printErrorMessageAndExit(String message) {
+    System.err.println(message);
     System.exit(1);
   }
 }
