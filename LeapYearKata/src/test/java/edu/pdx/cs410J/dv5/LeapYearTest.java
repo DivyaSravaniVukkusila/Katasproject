@@ -33,4 +33,13 @@ public class LeapYearTest {
         boolean check = leap.checkIfLeapYear(2019);
         assertEquals(check, false);
     }
+
+    @Test
+    public void testWithInvalidYear() {
+        LeapYear leap = new LeapYear();
+        boolean check = leap.checkIfLeapYear(-1234);
+        assertEquals(check, false);
+    }
+
+
 }
