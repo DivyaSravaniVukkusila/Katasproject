@@ -2,6 +2,13 @@ package edu.pdx.cs410J.dv5;
 
 public class LeapYear {
 
+    /**
+     * Validates if given year is leap year or not.
+     *
+     * @param year
+     *        The year
+     */
+
     public boolean checkIfLeapYear(int year) {
         if(year < 0) {
             System.out.println("Enter positive year");
