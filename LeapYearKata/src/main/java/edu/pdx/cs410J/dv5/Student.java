@@ -48,6 +48,9 @@ public class Student extends Human {
    * standard out by invoking its <code>toString</code> method.
    */
   public static void main(String[] args) {
+    if(args.length == 0) {
+      printErrorMessageAndExit("Missing command line arguments");
+    }
     LeapYear leapyear = new LeapYear();
     int year = 0;
     try {
